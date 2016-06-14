@@ -1,0 +1,2 @@
+<Context path="/example"
+ docBase="/webapps/example-1.2.war" />
