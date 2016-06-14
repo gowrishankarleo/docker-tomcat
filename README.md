@@ -61,6 +61,8 @@ Is the service it the intend then the following instructions are best followed.
 a) first test the deployment locally using tomcat-docker.
 b) turn this in a Docker service as follows: 
 
+
+
 ## adapting versions
 A tomcat setup is defined by the versions of 2 base components: tomcat and java.
 This docker setup is based on the java image. Adpating to a new java image is as simple as adapting the base java image from which this tomcat is build.
