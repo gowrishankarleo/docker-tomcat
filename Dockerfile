@@ -18,7 +18,6 @@ RUN apt-get install -y bash
 
 ADD config /config
 RUN chmod +x /config/*.sh
-# make it public so that the user can overwrite the values
 VOLUME config
 
 RUN mv /etc/cron.daily/logrotate /etc/cron.hourly/logrotate
