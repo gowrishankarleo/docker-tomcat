@@ -18,7 +18,6 @@ RUN apt-get install -y bash
 
 ADD config /config
 RUN chmod +x /config/*.sh
-VOLUME config
 
 RUN mv /etc/cron.daily/logrotate /etc/cron.hourly/logrotate
 RUN cp /config/logrotate /etc/logrotate.d/tomcat7
@@ -26,21 +25,18 @@ RUN chmod 644 /etc/logrotate.d/tomcat7
 
 # make logs available under standard location
 RUN ln -s /var/log/tomcat7 /logs
-VOLUME /logs
 
 # add a volume which will contain all locally created files by the webapp
 # webapps should be configured to write into it.
 ADD data /data
 RUN chown -R tomcat7:tomcat7 /data
 RUN chmod 777 /data
-VOLUME data
 
 # use the build-in deployment support of tomcat to deploy a service
 # 1. create a context file in the contexts 
 # 2. the webapps directory contains the war one likes to deploy
 ADD contexts /contexts
 ADD webapps /webapps
-VOLUME /webapps
 
 
 ENTRYPOINT ["/config/startup-tomcat.sh"]
