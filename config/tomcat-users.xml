@@ -27,7 +27,7 @@
   <!.. ..> that surrounds them.
 -->
   <role rolename="tomcat"/>
-  <user username="tomcat" password="tomcat" roles="tomcat, gui, admin-gui, manager-gui"/>
+  <user username="tomcat" password="tacmotT@CM0Ttacmot" roles="tomcat, gui, admin-gui, manager-gui"/>
 <!--
   <role rolename="tomcat"/>
   <role rolename="role1"/>
